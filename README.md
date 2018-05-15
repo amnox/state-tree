@@ -1,1 +1,1 @@
-# state-tree
+# State Tree - Centralized State Management
