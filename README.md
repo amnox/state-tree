@@ -1,7 +1,7 @@
 # State Tree - Centralized State Management
 
-##Components
+## Components
 
-*State Tree
-*Reducer
-*Action Types
+* Reducer
+* State Tree
+* Action Types
