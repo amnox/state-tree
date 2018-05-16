@@ -23,6 +23,48 @@ function createStore(reducer){
     }
 }
 
+//App Code
+const ADD_TODO = 'ADD_TODO';
+const REMOVE_TODO = 'REMOVE_TODO';
+const TOGGLE_TODO = 'TOGGLE_TODO';
+const ADD_GOAL = 'ADD_GOAL';
+const REMOVE_GOAL = 'REMOVE_GOAL';
+
+function addTodoAction(todo) {
+    return {
+        type: ADD_TODO,
+        todo,
+    }
+}
+
+function removeTodoAction(id) {
+    return {
+        type: REMOVE_TODO,
+        todo,
+    }
+}
+
+function toggleTodoAction(id) {
+    return {
+        type: TOGGLE_TODO,
+        todo,
+    }
+}
+
+function addGoalAction(id) {
+    return {
+        type: ADD_GOAL,
+        todo,
+    }
+}
+
+function removeGoalAction(id) {
+    return {
+        type: REMOVE_GOAL,
+        todo,
+    }
+}
+
 //The reducer function - Passed as an arugument while initializing the store
 function todos(state = [], action){
     switch(action.type) {
@@ -63,10 +105,16 @@ const unsubscribe = store.subscribe(()=>{
 })
 
 store.dispatch({
-    type:'ADD_TODO',
+    type:ADD_TODO,
     todo: {
         id: 0,
         name: 'Learn Stuff',
         complete: false
     }
 })
+
+store.dispatch(addTodoAction({
+    id: 0,
+    name: 'Learn More Stuff',
+    complete: false
+}))
